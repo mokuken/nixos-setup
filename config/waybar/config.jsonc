@@ -1,0 +1,75 @@
+{
+  "layer": "top",
+  "output": ["eDP-1", "DP-1", "VGA-1", "HDMI-A-1"],
+  "position": "top",
+  
+  "modules-left": ["hyprland/workspaces","cpu","memory"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["custom/music","pulseaudio","network","battery","clock"],
+  
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+        "default": "󰝦",
+		"focused": "󰝥",
+	},
+    "disable-click": true,
+  },
+
+  "cpu": {
+  	"format": "󰻠 {usage}%"
+  },
+
+  "memory": {
+  	"format": "󰍛 {}%"
+  },
+
+  "pulseaudio": {
+      // "scroll-step": 1, // %, can be a float
+     "format": "{icon} {volume}%",
+     "format-bluetooth": "{icon} 3{volume}%",
+     "format-bluetooth-muted": "󰖁 {icon}",
+     "format-muted": "󰖁 {format_source}",
+     "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+     	"default": ["󰕿", "󰖀", "󰕾"]
+     },
+	"on-click": "pavucontrol"
+  },
+
+  "clock": {
+    "format": "{:%a %I:%M %D}",
+    "interval": 60
+  },
+
+  "custom/music": {
+    "tooltip": false,
+    "format": "{}",
+    "interval": "once",
+    "signal": 1
+  },
+
+  "network": {
+    "format-icons": ["󰤟","󰤢","󰤥","󰤨"],
+    "format": "󰤭 Disconnected", 
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "󰈀 ethernet",
+    "format-disconnected": "󰤭 Disconnected",
+
+    "tooltip": false,
+    "max-length": 50
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}",
+    "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
+    "tooltip": false
+  }
+}

@@ -1,0 +1,104 @@
+*{
+  font-family: Roboto, Helvetica, Arial, san-serif;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#window {
+  margin: 5px;
+  margin-bottom: 0;
+  padding: 0 10px;
+}
+
+#workspaces {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin: 5px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  padding: 0 5px
+}
+
+#workspaces button {
+  font-size: 15px;
+  margin: 0 5px;
+}
+
+#workspaces button:hover{
+  background: transparent;
+}
+
+#cpu {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin: 5px;
+  margin-bottom: 0;	
+}
+
+#memory {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin: 5px;
+  margin-bottom: 0;
+}
+
+#mode {
+  border: 1px solid #333331; 
+  border-radius: 4px;
+}
+
+#clock {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin: 5px;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+#custom-music {
+  font-size: 13px;
+  border: 1px solid #fff; 
+  border-radius: 4px;
+}
+
+#pulseaudio {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin: 5px;
+  margin-bottom: 0;
+}
+
+#network {
+  font-size: 15px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin: 5px;
+  margin-bottom: 0;
+}
+
+#battery {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 0 10px;
+  margin: 5px;
+  margin-bottom: 0;
+}
