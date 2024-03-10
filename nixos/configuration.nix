@@ -82,7 +82,7 @@
    git
 
    # File manager
-   gnome.nautilus
+   xfce.thunar
 
    # Text / Code editor
    micro
