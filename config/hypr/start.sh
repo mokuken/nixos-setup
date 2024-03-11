@@ -9,6 +9,14 @@ else
     waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css &
 fi
 
+# Initialize wallpaper daemon
+if pgrep swww > /dev/null
+then
+    echo "swww is already running"
+else
+    swww init &
+fi
+
 # Setting wallpaper
 IMAGE_DIR="/home/mokuken/.config/hypr/waves"
 
@@ -33,15 +41,6 @@ random_image="${images[$random_index]}"
 echo "Randomly selected image: $random_image"
 
 swww img "$random_image"
-
-
-# Initialize wallpaper daemon
-if pgrep swww > /dev/null
-then
-    echo "swww is already running"
-else
-    swww init &
-fi
 
 # Running dunst
 # dunst
