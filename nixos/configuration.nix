@@ -81,9 +81,6 @@
    # Dev tools
    git
 
-   # File manager
-   xfce.thunar
-
    # Text / Code editor
    micro
    vscodium
@@ -102,6 +99,17 @@
     #style = "adwaita-dark";
   #};
 
+  # File manager & plugins
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+  services.tumbler.enable = true; # Thumbnail support for images
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+    thunar-archive-plugin
+  ];
+  
   # Remove default programs
   programs.nano.enable = false;
   services.xserver.excludePackages = [ pkgs.xterm ];
